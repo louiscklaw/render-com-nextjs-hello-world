@@ -1,0 +1,16 @@
+services:
+  dev-site:
+    image: node:lts
+    user: 1000:1000
+    ports:
+      - '3000:3000'
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: sleep infinity
+    # restart: always
+    # labels:
+    #   - 'traefik.enable=true'
+    #   - 'traefik.http.routers.whoami.rule=Host(`portfolio.iamon99.com`)'
+    #   - 'traefik.http.routers.whoami.entrypoints=websecure'
+    #   - 'traefik.http.routers.whoami.tls.certresolver=myresolver'

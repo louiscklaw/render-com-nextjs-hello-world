@@ -5,7 +5,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start -H 0.0.0.0",
-    "start-localhost": "next start"
+    "start-localhost": "next start",
+    "docker_rebuild": "docker compose up -d --build",
+    "into_docker": "docker compose exec -it dev-site bash"
   },
   "dependencies": {
     "next": "^11.1.1",
